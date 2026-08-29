@@ -1,0 +1,11 @@
+In order to get the validation loss curves with epochs,
+I realized the sklearn MLPClassifier didnt expose an easy function call to just get those data points.
+
+I used an AI to figure out what's the best awy to get that:
+And it suggested using model.partial_fit(X_train, y_train, classes=classes)
+that allowed me to get epoch wise data and log it accordingly
+
+
+
+I also got a bug, which I used an AI to debug:
+I needed to add skops_trusted_types=["sklearn.neural_network._stochastic_optimizers.AdamOptimizer"] to mlflow.sklearn.log_model
