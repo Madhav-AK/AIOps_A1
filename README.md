@@ -18,6 +18,11 @@ This README file goes through all major submission points.
 - The answers to question 2 can be found in the pdf in the q2/ folder of this repo.
 - The notebook used to generate the results can also be found in the q2/ folder of this repo.
 
+Instructions to Run the Notebook:
+- First run the command: mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000 --allowed-hosts "*" --cors-allowed-origins "http://localhost:5000, http://127.0.0.1:5000"
+- The above launches the mlflow server
+- You can now open q2/q2.ipynb and run the cells of the notebook.
+
 ### Question 3:
 
 - The Screenshots at the necessary intervals showing the original, modified, and rolled back states can be found in the q3/ folder of this repo.
